@@ -7,7 +7,6 @@
 }
 
 html {
-  /* 1rem = 10px */
   font-size: 50%;
 }
 
@@ -25,7 +24,7 @@ body {
 }
 
 .accordion {
-  width: 100%;
+  max-width: 60rem;
   margin: 0 auto;
 
   display: flex;
@@ -71,7 +70,7 @@ body {
   transition: all 0.3s;
 }
 
-/* Checked functionality */
+/* EXPANDED STATE */
 .item__input:checked ~ .item__title {
   color: lightseagreen;
 }
@@ -82,4 +81,28 @@ body {
 
 .item__input:checked ~ .item__icon {
   background-image: url("./icons/cross.svg");
+}
+
+/*
+  MEDIA QUERIES
+
+  Mobile: 320px = 20em;
+  Tablet: 820px = 51.25em;
+  Desktop: 1920px = 120em;
+*/
+
+@media only screen and (min-width: 51.25em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .item__content {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 120em) {
+  html {
+    font-size: 62.5%;
+  }
 }
