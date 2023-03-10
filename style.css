@@ -1,3 +1,9 @@
+:root {
+  --cl-primary-blue: #339af0;
+  --cl-secondary-blue: #a5d8ff;
+  --cl-black: #212529;
+}
+
 *,
 *::before,
 *::after {
@@ -16,10 +22,11 @@ body {
   height: 101vh;
 
   box-sizing: border-box;
+  color: var(--cl-black);
 }
 
 .title {
-  font-size: 3.6rem;
+  font-size: 3rem;
   margin: 1rem;
 }
 
@@ -37,7 +44,9 @@ body {
   align-items: center;
 
   padding: 1rem;
-  border-top: 2px solid lightblue;
+  border-top: 2px solid var(--cl-secondary-blue);
+
+  color: var(--cl-primary-blue);
 }
 
 .item__input {
@@ -46,7 +55,7 @@ body {
 
 .item__title {
   grid-column: 1 / 2;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 
 .item__icon {
@@ -72,7 +81,7 @@ body {
 
 /* EXPANDED STATE */
 .item__input:checked ~ .item__title {
-  color: lightseagreen;
+  color: var(--cl-black);
 }
 
 .item__input:checked ~ .item__content {
@@ -104,5 +113,30 @@ body {
 @media only screen and (min-width: 120em) {
   html {
     font-size: 62.5%;
+  }
+
+  .accordion:hover > * {
+    transition: all 0.3s;
+    color: var(--cl-black);
+  }
+
+  .item__icon {
+    opacity: 0;
+  }
+
+  .accordion:hover .item__icon {
+    opacity: 1;
+  }
+
+  .item:hover {
+    cursor: pointer;
+  }
+
+  .item:hover .item__content {
+    max-height: 100vh;
+  }
+
+  .item:hover .item__icon {
+    background-image: url("./icons/cross.svg");
   }
 }
