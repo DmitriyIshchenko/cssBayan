@@ -139,4 +139,12 @@ body {
   .item:hover .item__icon {
     transform: rotate(90deg);
   }
+
+  .item:active .item__title {
+    color: var(--cl-secondary-blue);
+  }
+
+  .item:active .item__content {
+    filter: brightness(90%);
+  }
 }
