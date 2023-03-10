@@ -56,5 +56,15 @@ body {
   grid-column: 1 / -1;
   justify-self: center;
 
+  max-height: 0;
   transition: all 0.3s;
+}
+
+/* Checked functionality */
+.item__input:checked ~ .item__title {
+  color: lightseagreen;
+}
+
+.item__input:checked ~ .item__content {
+  max-height: 100vh;
 }
