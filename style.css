@@ -59,14 +59,9 @@ body {
 }
 
 .item__icon {
-  justify-self: center;
-
-  width: 1.5rem;
-  height: 1.5rem;
-
-  background-image: url("./icons/plus.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  justify-self: end;
+  transform: rotate(0deg);
+  transition: all 0.3s;
 }
 
 .item__content {
@@ -89,7 +84,8 @@ body {
 }
 
 .item__input:checked ~ .item__icon {
-  background-image: url("./icons/cross.svg");
+  /* background-image: url("./icons/cross.svg"); */
+  transform: rotate(90deg);
 }
 
 /*
@@ -137,6 +133,6 @@ body {
   }
 
   .item:hover .item__icon {
-    background-image: url("./icons/cross.svg");
+    transform: rotate(90deg);
   }
 }
