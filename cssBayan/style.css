@@ -50,6 +50,14 @@ body {
   color: var(--cl-primary-blue);
 }
 
+.item:active .item__title {
+  color: var(--cl-secondary-blue);
+}
+
+.item:active .item__content {
+  filter: brightness(90%);
+}
+
 .item__input {
   appearance: none;
 }
@@ -112,7 +120,9 @@ body {
   html {
     font-size: 62.5%;
   }
+}
 
+@media (hover: hover) {
   .accordion:hover > * {
     transition: all 0.3s;
     color: var(--cl-black);
@@ -136,13 +146,5 @@ body {
 
   .item:hover .item__icon {
     transform: rotate(90deg);
-  }
-
-  .item:active .item__title {
-    color: var(--cl-secondary-blue);
-  }
-
-  .item:active .item__content {
-    filter: brightness(90%);
   }
 }
