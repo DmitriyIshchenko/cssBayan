@@ -4,9 +4,7 @@
   --cl-black: #212529;
 }
 
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
