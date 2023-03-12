@@ -106,6 +106,12 @@ body {
   Desktop: 1920px = 120em;
 */
 
+@media only screen and (min-width: 20em) {
+  html {
+    font-size: 45%;
+  }
+}
+
 @media only screen and (min-width: 51.25em) {
   html {
     font-size: 56.25%;
